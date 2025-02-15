@@ -5,9 +5,8 @@ import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
 
 export default function Search({ placeholder }: { placeholder: string }) {
-  const searchParams = useSearchParams();
-
-  const pathname = usePathname();
+  const searchParams = useSearchParams(); // query=alice
+  const pathname = usePathname(); // /dashboard/invoices
   const { replace } = useRouter();
 
   const handleSearch = useDebouncedCallback((term: string) => {
