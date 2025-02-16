@@ -3,7 +3,7 @@ import Breadcrumbs from "@/app/ui/invoices/breadcrumbs";
 import { fetchInvoiceById, fetchCustomers } from "@/app/lib/data";
 // import { customers, invoices } from "@/app/lib/placeholder-data";
 import { notFound } from "next/navigation";
-import { updateInvoice } from "@/app/lib/actions";
+// import { updateInvoice } from "@/app/lib/actions";
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
